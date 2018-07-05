@@ -12,9 +12,12 @@ from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import preprocess_input
 from keras.applications.vgg16 import decode_predictions
 from keras.applications.vgg16 import VGG16
-
+from keras.utils.vis_utils import plot_model
+import pydot
+import graphviz
 # load the model
 model = VGG16()
+plot_model(model,to_file="D:/test.png")
 
 window = tk.Tk()
 
